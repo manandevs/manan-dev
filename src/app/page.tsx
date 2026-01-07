@@ -1,29 +1,17 @@
-import AboutSection from "@/components/about-section";
-import AnimatedBackground from "@/components/animated-background";
-import ContactSection from "@/components/contact-section";
-// import ExperienceSection from "@/components/experience-section";
-import Footer from "@/components/footer";
-import HeroSection from "@/components/hero-section";
-import NavigationBar from "@/components/navigation-bar";
-import ProjectsSection from "@/components/projects-section";
-import SkillsSection from "@/components/skills-section";
-import SparklingCursor from "./sparkling-cursor";
+import NavBar from "@/components/ui/NavBar";
+import Hero from "@/components/sections/Hero";
+import Work from "@/components/sections/Work";
+import Story from "@/components/sections/Story";
+import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <div>
-      <AnimatedBackground />
-      <div className="bg-slate-950">
-        <NavigationBar />
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        {/* <ExperienceSection /> */}
-        <ContactSection />
-        <Footer />
-      </div>
-      <SparklingCursor />
-    </div>
+    <main className="relative w-full">
+      <NavBar />
+      <Hero />
+      <Work />
+      <Story />
+      <Footer />
+    </main>
   );
 }

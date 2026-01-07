@@ -1,59 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Newsreader, Permanent_Marker } from "next/font/google";
 import "./globals.css";
+import CustomCursorWithParticles from "@/components/ui/SparklingCursor";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const newsreader = Newsreader({
   subsets: ["latin"],
+  variable: "--font-newsreader",
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const permanentMarker = Permanent_Marker({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-marker",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Abdul Manan | Full Stack Developer",
-  description:
-    "Portfolio of Abdul Manan, Full Stack Developer & Creative Problem Solver. Crafting modern digital experiences using clean code and innovative solutions.",
-  keywords: [
-    "Abdul Manan",
-    "Full Stack Developer",
-    "Web Developer",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "GSAP",
-    "JavaScript",
-    "TypeScript",
-    "Portfolio",
-  ],
-  authors: [{ name: "Abdul Manan", url: "https://yourdomain.com" }],
-  creator: "Abdul Manan",
-  metadataBase: new URL("https://yourdomain.com"),
-  openGraph: {
-    title: "Abdul Manan | Full Stack Developer",
-    description:
-      "Clean code, innovative solutions, and modern web experiences. See my work and tech stack.",
-    url: "https://yourdomain.com",
-    siteName: "Abdul Manan Portfolio",
-    images: [
-      {
-        url: "",
-        width: 1200,
-        height: 630,
-        alt: "Abdul Manan Portfolio",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Abdul Manan | Full Stack Developer",
-    description:
-      "Modern full stack web developer creating clean and innovative solutions.",
-    images: [""],
-  },
+  title: "Daniel Sun | Digital Designer",
+  description: "Portfolio of Daniel Sun - Interactive Designer & Developer",
 };
 
 export default function RootLayout({
@@ -62,15 +34,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        {/* fallback for older browsers */}
-        <link rel="alternate icon" type="image/png" href="/favicon.png" />
-      </head>
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
+        className={`${inter.variable} ${newsreader.variable} ${permanentMarker.variable} font-sans antialiased bg-white selection:bg-yellow-300 selection:text-black`}
       >
+        <CustomCursorWithParticles />
         {children}
       </body>
     </html>
