@@ -1,8 +1,5 @@
 # 🎨 Abdul Manan - Creative Portfolio
 
-![Project Banner](public/images/png/bg.png) 
-*(Note: Replace the path above with a screenshot of your hero section for better visuals)*
-
 A high-fidelity creative developer portfolio inspired by new brutalism and skeuomorphic design trends. Built to showcase interactive UI skills using modern web technologies.
 
 🔗 **Live Demo:** [https://abdulmanan-portfolio-psi.vercel.app](https://abdulmanan-portfolio-psi.vercel.app)
